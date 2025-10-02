@@ -1,0 +1,148 @@
+:root { 
+  --gap: 0px; 
+  --size: 10rem; 
+background: linear-gradient(90deg, #df9cb1 0%, #e966a8dc 60%, #e445d6 100%);
+
+
+}
+.app { 
+  max-width: 800px; 
+  margin: 24px auto; 
+  padding: 0 16px; 
+  text-align: center;
+  background-color: rgb(55, 23, 112);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.329); 
+  padding: 20px;
+}
+.controls { 
+  display: flex; 
+  gap: 12px; 
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 16px; 
+}
+.grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr)); 
+  gap: var(--gap); 
+}
+.card { 
+  perspective: 800px; 
+  border: none; 
+  background: transparent; 
+  cursor: pointer; 
+}
+.card-inner { 
+  width: 100%; 
+  aspect-ratio: 1 / 1; 
+  position: relative; 
+  transform-style: preserve-3d; 
+  transition: transform 0.5s ease; 
+  border-radius: 12px; 
+  box-shadow: 0 6px 18px rgba(134, 134, 134, 0.329); 
+}
+.card.open .card-inner { 
+  transform: rotateY(180deg); 
+}
+.card-front, .card-back { 
+  position: absolute; 
+  inset: 0; 
+  display: grid; 
+  place-items: center; 
+  backface-visibility: hidden; 
+  border-radius: 12px; 
+}
+.card-front { 
+  background: #1f2937; 
+  color: #fff; 
+  font-size: 2rem; 
+}
+.card-back { 
+  background: #ffffff54; 
+  transform: rotateY(180deg); 
+}
+.card-back img { 
+  width: 85%; 
+  height: 85%; 
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px; 
+}
+
+.btn {
+  margin: auto 10px;
+  background: linear-gradient(90deg,#ff7a59,#ff5e8a);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(255,94,138,0.18);
+}
+
+.modal{
+  border: none;
+  border-radius: 12px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #32285c;
+  box-shadow: 0 2px 20px #6247ea22;
+}
+
+.modal[open] {
+  animation: slide-in-from-top 0.35s ease-out;
+}
+
+.modal::backdrop {
+  background: rgba(38, 34, 71, 0.95);
+}
+.modal h2 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 0.25rem 0;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: #6247ea;
+  letter-spacing: 0.04em;
+}
+
+.modal p {
+  margin: 0.8rem 0;
+  font-size: 1.4rem;
+}
+
+.modal p strong {
+  color: #6247ea;
+}
+.modal form{
+  text-align: right;
+}
+
+.modal button{
+  padding: 15px;
+  font-size: 1.2em;
+}
+@keyframes slide-in-from-top {
+  0% {
+    transform: translateY(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+

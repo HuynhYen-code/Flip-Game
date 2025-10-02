@@ -1,0 +1,79 @@
+.controls-root {
+  font-family: "Quicksand", sans-serif;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  background: plum;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  margin-bottom: 16px;
+}
+
+
+.game-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 2.4rem;
+  margin: 0 0 0.25em 0;
+  letter-spacing: 0.07em;
+}
+
+.player-greet {
+  font-family: monospace;
+  margin: 10px;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.control{
+  border-radius: 5px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(124, 90, 113, 0.61);
+  background-color: #eeacee;
+  margin: 20px;
+}
+
+.right-control select{
+  margin: auto 10px 5px;
+}
+.right-control span, h3{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+}
+
+.right-control select{
+  background-color: #8668fcb4;
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
+  padding: 5px;
+}
+.right-control select:focus{
+  background-color: #5d3dddb4;
+}
+.btn:focus {
+  outline: 3px solid rgba(59,130,246,0.18);
+  outline-offset: 2px;
+}
+
+input{
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
+  border: rgba(89, 5, 114, 0.678) solid 3px;
+  box-shadow: 2px 2px 2px 2px #ff2dff3a; ;
+}
+/* Responsive: khi nhỏ hơn 520px, xếp dọc */
+@media (max-width: 520px) {
+  .controls-root { flex-direction: column; align-items: stretch; }
+  .controls-right { justify-content: space-between; width: 100%; }
+  .controls-left { align-items: flex-start; }
+}
